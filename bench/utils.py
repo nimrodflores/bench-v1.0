@@ -112,7 +112,7 @@ def setup_env(bench='.'):
 	exec_cmd('./env/bin/pip -q install -e git+https://github.com/frappe/python-pdfkit.git#egg=pdfkit', cwd=bench)
 
 def setup_socketio(bench='.'):
-	exec_cmd("npm install socket.io redis express superagent cookie", cwd=bench)
+	exec_cmd("npm install socket.io redis express superagent cookie websocket", cwd=bench)
 
 def setup_procfile(with_celery_broker=False, with_watch=False, bench='.'):
 	from .app import get_current_frappe_version
